@@ -451,7 +451,7 @@ function speak(text){
   if(!window.speechSynthesis)return;
   window.speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(text);
-  u.rate=1.05;u.pitch=0.75;u.volume=1.0;
+  u.rate=1.38;u.pitch=0.75;u.volume=1.0;
   const trySpeak=()=>{
     const vs=window.speechSynthesis.getVoices();
     if(!vs.length)return;
