@@ -578,8 +578,9 @@ let activeCard=0;
 const totalCards=6;
 function getCardTransform(rel){
   const abs=Math.abs(rel);
+  const txBase = window.innerWidth <= 768 ? 170 : 230;
   return{
-    tx:rel*230,ry:rel*52,tz:-abs*90,
+    tx:rel*txBase,ry:rel*52,tz:-abs*90,
     scale:Math.max(0.55,1-abs*0.13),
     opacity:abs>1.5?0:abs>0.9?0.45:1
   };
